@@ -1,0 +1,21 @@
+Cheatsheet Git/Github
+
+git clone (link)
+
+git status
+
+git fetch
+git pull
+
+git add . or git add (filename)
+git commit -m "message text within quotes"
+git push
+
+git log
+git log --oneline --graph --all
+
+git branch 
+git checkout (branchname)
+git merge (branch to be merged into current branch)
+
+
