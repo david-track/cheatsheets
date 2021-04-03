@@ -1,0 +1,3 @@
+Modifier: Windows
+Dmenu: Mod-d 
+Terminal: mod-enter
