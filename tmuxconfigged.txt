@@ -1,0 +1,24 @@
+prefix CTRL-a
+
+Panes
+Split horizontally - : prefix h
+Split vertically | : prefix v
+Close pane: type exit or prefix x or CTRL-d
+Switch between panes: ALT up/down/left/right
+Toggle zoom into/out of 1 specific pane: prefix z
+
+Windows
+Create new window: prefix c 
+Previous window: Shift left arrow
+Next window: shift right arrow
+Name window: prefix ,
+
+Sessions
+List sessions: tmux ls or tmux list-sessions or (from within tmux, with preview) prefix s
+Rename session from within tmux: prefix $
+Attach to session: tmux a -t (number or name of session) or tmux attach -t (number or name of session) 
+Start new session with name: tmux new -s "name"
+Disconnect from session: prefix d
+Kill session: tmux kill-session -t "name" or tmux kill-session -a (all)
+
+Reload config: prefix R

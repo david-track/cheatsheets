@@ -1,10 +1,9 @@
 tmux general
-
 Open tmux: tmux
-Attach to tmux server: tmux attach 
 Standard prefix: CTRL-b
-My prefix: 
+My prefix: CTRL-a
 
+Default settings 
 Panes
 Split horizontally - : prefix "
 Split vertically | : prefix %
@@ -16,3 +15,52 @@ Windows
 Create new window: prefix c 
 Previous window: prefix p
 Next window: prefix n 
+Name window: prefix ,
+
+Sessions
+List sessions: tmux ls or tmux list-sessions or (from within tmux, with preview) prefix s
+Rename session from within tmux: prefix $
+Attach to session: tmux a -t (number or name of session) or tmux attach -t (number or name of session) 
+Start new session with name: tmux new -s "name"
+Disconnect from session: prefix d
+Kill session: tmux kill-session -t "name" or tmux kill-session -a (all)
+
+
+Customization and tweaks
+Configuration file: .tmux.conf
+Veranderingen met deze config:
+- CTRL-a als prefix
+- Switch panes met ALT-pijltjes omhoog/omlaag/links/rechts
+- Switch windows met Shift-pijltjes omhoog/omlaag/links/rechts
+- Muis aan (voor bv schakelen tussen panes)
+- Gebruik prefix + v of h voor splitsen scherm horizontaal of verticaal
+- Reload config met prefix r
+
+Online cheatsheet: https://tmuxcheatsheet.com
+Example config from: https://pastebin.com/CDEVZTSC
+
+# Send prefix (set prefix to CTRL-a)
+set-option -g prefix C-a
+unbind-key C-a
+bind-key C-a send-prefix
+ 
+# Use Alt-arrow keys to switch panes
+bind -n M-Left select-pane -L
+bind -n M-Right select-pane -R
+bind -n M-Up select-pane -U
+bind -n M-Down select-pane -D
+ 
+# Shift arrow to switch windows
+bind -n S-Left previous-window
+bind -n S-Right next-window
+ 
+# Mouse mode
+setw -g mouse on
+ 
+# Set easier window split keys
+bind-key v split-window -h
+bind-key h split-window -v
+ 
+# Easy config reload
+bind-key r source-file ~/.tmux.conf \; display-message "~/.tmux.conf reloaded."
+
