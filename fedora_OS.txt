@@ -1,0 +1,11 @@
+My shortcuts
+
+Open Terminal: Alt-t 
+Open dropdown terminal (Yakuake): F12
+Open KRunner: Alt-Space
+
+Location config files:
+vim: .vimrc
+bash: .bashrc
+i3wm: ~/.config/i3/config
+tmux: .tmux.conf
