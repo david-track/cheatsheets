@@ -1,0 +1,18 @@
+tmux general
+
+Open tmux: tmux
+Attach to tmux server: tmux attach 
+Standard prefix: CTRL-b
+My prefix: 
+
+Panes
+Split horizontally - : prefix "
+Split vertically | : prefix %
+Close pane: type exit or prefix x or CTRL-d
+Switch between panes: prefix up/down/left/right
+Toggle zoom into/out of 1 specific pane: prefix z
+
+Windows
+Create new window: prefix c 
+Previous window: prefix p
+Next window: prefix n 
