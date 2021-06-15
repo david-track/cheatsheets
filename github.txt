@@ -14,8 +14,8 @@ git push
 git log
 git log --oneline --graph --all
 
-git branch 
-git checkout (branchname)
-git merge (branch to be merged into current branch)
+git branch  (geeft aan in welke branch je zit)
+git checkout (branchname)  (hiermee switch je naar andere branch)
+git merge (branch to be merged into current branch) (hiermee merge je de gekozen branch naar current)
 
 
